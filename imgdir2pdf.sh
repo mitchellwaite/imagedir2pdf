@@ -68,7 +68,7 @@ fi
 
 echo ""
 
-if [ -z "$directoryStr"]
+if [ -z "$directoryStr" ]
 then
    read -p "Unable to determine document ID, please input an identifier (no spaces!) and press enter: "
 
@@ -122,11 +122,10 @@ echo "====================="
 
 for (( i=1; i<=$2; i++ ))
 do
-#   wget --header="Referer:$refererStr" $1$i.jpg -O $directoryStr/src/$i.jpg
-   echo $imageDir$i.jpg
+   wget --header="Referer:$refererStr" $1$i.jpg -O $directoryStr/src/$i.jpg
+#   echo $imageDir$i.jpg
+#   echo $directoryStr/src/$i.jpg
 done
-
-exit
 
 echo ""
 echo "Creating full size PDF"
